@@ -64,6 +64,22 @@
       summary{font-size:1.05rem;padding:0;margin:4px 0}
       @page{ size: letter; margin: 0.5in }
     }
+  
+    /* === Mobile-friendly enhancements === */
+    .table-responsive{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .key{grid-template-columns: minmax(120px, 1fr) 2fr}
+    .key div{word-break: break-word}
+    .badge{white-space: normal; word-break: break-word}
+    table{max-width:100%}
+    img{max-width:100%; height:auto}
+    @media (max-width: 640px){
+      .wrap{padding:16px}
+      .key{grid-template-columns: 1fr}
+      .key div:nth-child(odd){font-weight:600}
+      table, thead, tbody, th, td, tr{font-size:14px}
+      th, td{padding:8px !important}
+    }
+
   </style>
   <script>
     function printPage(){ window.print(); }
@@ -149,7 +165,7 @@
 
         <h3>Medication</h3>
         <!-- <p>If any meds are needed, list them here:</p> -->
-        <table style="width:100%;border-collapse:collapse">
+        <div class="table-responsive"><table style="width:100%;border-collapse:collapse">
           <thead>
             <tr>
               <th style="text-align:left;border-bottom:1px solid var(--border);padding:6px">Milo</th>
@@ -173,7 +189,7 @@
               <td style="padding:6px">—</td><td style="padding:6px">—</td><td style="padding:6px">—</td><td style="padding:6px">—</td><td style="padding:6px">—</td>
             </tr> -->
           </tbody>
-        </table>
+        </table></div>
 
         <h3>Litter Boxes</h3>
         <ul>
