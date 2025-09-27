@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cat Sitter Guide — Milo, Izzy & Marbles</title>
+  <meta name="description" content="Printable, mobile-friendly guide for the cat sitter of Milo, Izzy & Marbles." />
+  <style>
+    :root{
+      --bg: #fff8f0;
+      --card: #f9fafb;
+      --ink: #0f172a;
+      --muted: #475569;
+      --brand: #6366f1;
+      --accent: #10b981;
+      --warn: #ef4444;
+      --border: #f4a460;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    .wrap{max-width:1000px;margin-inline:auto;padding:24px}
+    header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .title{display:flex;gap:14px;align-items:center}
+    .title .em{font-size:42px}
+    h1{font-size: clamp(1.6rem, 2.2vw, 2.2rem); margin:0}
+    .sub{color:var(--muted)}
+    .btns{display:flex;gap:10px}
+    button, .btn{background:var(--brand);border:none;color:#fff;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600}
+    button.secondary{background:#1118270d;color:#111827;border:1px solid var(--border)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+    .col-12{grid-column:span 12}
+    .col-6{grid-column:span 6}
+    .col-4{grid-column:span 4}
+    .col-8{grid-column:span 8}
+    @media (max-width: 840px){.col-6,.col-4,.col-8{grid-column:span 12}}
+
+    h2{font-size:1.15rem;margin:0 0 10px}
+    h3{font-size:1rem;margin:14px 0 6px}
+    p{margin:6px 0}
+    ul{margin:6px 0 6px 1rem}
+    .muted{color:var(--muted)}
+    .key{display:grid;grid-template-columns: 170px 1fr;gap:8px}
+    .key div{padding:4px 0}
+    .badge{display:inline-block;background:#1118270d;border:1px solid var(--border);padding:5px 12px;border-radius:999px;margin-right:8px}
+    .photos{display:flex;gap:14px;flex-wrap:wrap}
+    .cat{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px;flex:1 1 280px;min-width:260px}
+    .cat img{width:86px;height:86px;border-radius:10px;object-fit:cover;border:1px solid var(--border);background:#fff}
+    .cat h3{margin:0 0 6px;font-size:1.05rem}
+    .checklist li{list-style:none;margin:6px 0;display:flex;gap:10px}
+    .checklist input{transform:translateY(2px)}
+    details{border:1px solid var(--border);border-radius:10px;background:#fff}
+    summary{padding:10px 14px;cursor:pointer;font-weight:700}
+    details > div{padding:10px 14px;border-top:1px solid var(--border)}
+    .danger{color:var(--warn);font-weight:700}
+    .note{background:#fff3cd;border:1px solid #ffe69c;padding:8px 12px;border-radius:10px}
+
+    /* Print styles */
+    @media print{
+      header .btns, .no-print { display:none !important }
+      body{background:#fff}
+      .wrap{padding:0}
+      .card{border:none;background:#fff}
+      details{border:none}
+      summary{font-size:1.05rem;padding:0;margin:4px 0}
+      @page{ size: letter; margin: 0.5in }
+    }
+  </style>
+  <script>
+    function printPage(){ window.print(); }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <div class="em">🐾</div>
+        <div>
+          <h1>Cat Sitter Guide — <strong>Milo</strong>, <strong>Izzy</strong> & <strong>Marbles</strong></h1>
+          <div class="sub">For our trusted sitter · Last updated <span id="lastUpdated"></span></div>
+        </div>
+      </div>
+      <!-- <div class="btns no-print">
+        <button onclick="printPage()">🖨️ Print</button>
+        printable.html🧾 Printable version</a>
+      </div> -->
+    </header>
+
+    <section class="grid">
+      <div class="card col-8">
+        <h2>Quick Reference</h2>
+        <div class="key">
+          <div class="muted">Primary contact</div><div><strong>Daiane da Silva</strong> — <span class="badge">(919) 672-3672</span> </div>
+          <div class="muted">Address</div><div><em>1425 Bedford Street, Apt 12B - Stamford, CT</em></div>
+          <!-- <div class="muted">Emergency contact</div><div><em>Name</em> — <span class="badge">PHONE</span></div> -->
+          <!-- <div class="muted">Vet (Primary)</div><div><em>Clinic name</em> — <span class="badge">PHONE</span> · #map</a></div>
+          <div class="muted">24/7 ER Vet</div><div><em>Clinic name</em> — <span class="badge">PHONE</span> · #map</a></div> -->
+          <div class="muted">Wi‑Fi</div><div><span class="badge">MyOptimum94fd91</span> <span class="badge">32-linen-6422</span></div>
+        </div>
+        <!-- <p class="note">Tip: Replace badges (PHONE/EMAIL/Network/Password) with your real info before you publish.</p> -->
+      </div>
+
+      <div class="card col-4">
+        <h2>Visit Plan</h2>
+        <!-- <p>Select the protocol your sitter should follow:</p> -->
+        <details open>
+          <summary>Twice‑a‑day visits (AM + PM)</summary>
+          <div>
+            <ul class="checklist">
+              <li><input type="checkbox"> AM feedings & check water fountain</li>
+              <li><input type="checkbox"> AM meds (if any)</li>
+              <li><input type="checkbox"> Scoop litter</li>
+              <li><input type="checkbox"> 10 min play / enrichment</li>
+              <li><input type="checkbox"> PM feedings</li>
+              <li><input type="checkbox"> PM meds (if any)</li>
+              <!-- <li><input type="checkbox"> Tidy up; lights; lock up</li> -->
+            </ul>
+          </div>
+        </details>
+        <div style="height:10px"></div>
+        <details>
+          <summary>Once‑a‑day visits</summary>
+          <div>
+            <ul class="checklist">
+              <li><input type="checkbox"> Feedings & water refresh</li>
+              <li><input type="checkbox"> Meds (if any)</li>
+              <li><input type="checkbox"> Scoop litter & Tidy up if needed</li>
+              <li><input type="checkbox"> 15–20 min play / cuddles</li>
+              <!-- <li><input type="checkbox"> Tidy up; lights; lock up</li> -->
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="card col-8">
+        <h2>Daily Routine</h2>
+        <h3>Feeding</h3>
+        <ul>
+          <li><strong>Milo</strong>: <em>1 can wet food + automatic feeder (once/day), 1 can + Marbles' leftovers (twice/day).</em></li>
+          <li><strong>Izzy</strong>: <em> ½ can wet + 3 dry nuggets + dry food (once/day), ½ can + 3 nuggets (twice/day).</em></li>
+          <li><strong>Marbles</strong>: <em>½ can wet + dry food (once/day), 2.7 oz wet food (twice/day).</em></li>
+        </ul>
+        <p class="muted">Food located in the the front closet. Dry food is located at the bottom of the shelf. 
+          Marbles' feeder has a pink heart sticker on it. Izzy has a blue one. 
+          If you are coming only once a day, please use a small bowl for Marbles and Izzy's wet food. Place the dry food in the automatic feeder.
+          If you are coming twice a day, they will be using only automatic feeder.
+          Milo gets his wet food in the puzzle plate.
+
+        </p>
+
+        <h3>Medication</h3>
+        <!-- <p>If any meds are needed, list them here:</p> -->
+        <table style="width:100%;border-collapse:collapse">
+          <thead>
+            <tr>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:6px">Milo</th>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:6px">Inhaler</th>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:6px">2 puffs + 8 breaths</th>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:6px">Twice‑a‑day</th>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:6px">Dispense one puff. Watch him breath 4 times. Give him another puff. Watch him breath 4 times.</th>
+            </tr>
+          </thead>
+            <thead>
+            <tr>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:6px">Milo</th>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:6px">Predisone</th>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:6px">1 pill</th>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:6px">Wednesday and Saturdays</th>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:6px">Wrap pill in the pill pocket. Give one pill pocket to Marbles as well.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td style="padding:6px">—</td><td style="padding:6px">—</td><td style="padding:6px">—</td><td style="padding:6px">—</td><td style="padding:6px">—</td>
+            </tr> -->
+          </tbody>
+        </table>
+
+        <h3>Litter Boxes</h3>
+        <ul>
+          <li>Scoop once a day; dispose of full trash bag in the trash shoot by the elevator.</li>
+          <li>Top up litter if below preferred depth</li>
+        </ul>
+
+        <h3>Play & Enrichment</h3>
+        <ul>
+          <li>Wand toy or laser for a few minutes with each cat.</li>
+          <li>Puzzle feeders or treat; put toys away afterward.</li>
+        </ul>
+      </div>
+
+      <div class="card col-4">
+        <h2>House & Safety</h2>
+        <ul>
+          <li>Keep doors latched. <span class="danger">Watch the front door — Marbles is curious.</span></li>
+          <li>No lilies or essential oils around the cats.</li>
+          <li>If you need to go to the porch, make sure the glass door is not closed all the way so the cats can have access to the catio. Also make sure the screened door is closed all the day. I don't want them to be able to get outside unsupervised.</li>
+          <li>Do not leave food out. Put leftovers in the fridge or compost.</li>
+          <li>Rinse their cans and place it in the recycling bin</li>
+          <!-- <li>Trash/recycling days: <em>fill in</em></li>
+          <li>Thermostat: <em>fill in</em></li> -->
+        </ul>
+        <h3>Emergency Plan</h3>
+        <ol>
+          <li>Call/text Daiane. If no response in 10 minutes, call emergency contact.</li>
+          <li>If medical emergency, go to ER vet and notify me from there.</li>
+          <li>Bring carrier, this sheet, and my authorization if needed. I have a big carrier behind the second bedroom's door and one in the closet.</li>
+        </ol>
+      </div>
+
+      <div class="card col-12">
+        <h2>Meet the Cats</h2>
+        <div class="photos">
+          <div class="cat">
+            <img src="img/milo.jpg" alt="Milo illustration">
+            <div>
+              <h3>Milo</h3>
+              <p>Orange with white bib & socks. Knows how to <strong>sit</strong> and do <strong>high‑fives</strong>. Loves food.</p>
+              <!-- <p class="muted">Photo filename: <code>img/milo.jpg</code></p> -->
+            </div>
+          </div>
+          <div class="cat">
+            <img src="img/izzy.jpg" alt="Izzy illustration">
+            <div>
+              <h3>Izzy</h3>
+              <p>Calico, mostly white with red & black spots on back/head; orange spot around nose; pink nose. Very talkative and a little weird. She is shy at first.</p>
+              <!-- <p class="muted">Photo filename: <code>img/izzy.jpg</code></p> -->
+            </div>
+          </div>
+          <div class="cat">
+            <img src="img/marbles.jpg" alt="Marbles illustration">
+            <div>
+              <h3>Marbles</h3>
+              <p>Tortoiseshell with white chest/chin; one black leg and one orange leg with white paws. Social butterfly. Knows how to <strong>sit</strong> and do <strong>high‑fives</strong>. Loves churu</p>
+              <!-- <p class="muted">Photo filename: <code>img/marbles.jpg</code></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="card col-12">
+        <h2>Notes for the Sitter</h2>
+        <ul>
+          <li>Packages: <em>fill in where to place</em></li>
+          <li>Plants: <em>watering instructions if needed</em></li>
+          <li>Mail: <em>collect or ignore</em></li>
+          <li>Anything else: <em>add here</em></li>
+        </ul>
+      </div> -->
+    </section>
+
+    <footer class="muted" style="margin-top:24px">Made with ❤️ for Milo, Izzy & Marbles. This page has a print‑friendly layout. Replace placeholders before publishing.</footer>
+  </div>
+
+  <script>
+    (function(){
+      const d = new Date();
+      const opts = { year:'numeric', month:'long', day:'numeric' };
+      document.getElementById('lastUpdated').textContent = d.toLocaleDateString(undefined, opts);
+    })();
+  </script>
+</body>
+</html>
